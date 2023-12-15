@@ -3,7 +3,7 @@ package sets;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Task01 {
+public class Task02 {
 
     public static void main (String[] args){
 
@@ -18,7 +18,7 @@ public class Task01 {
         System.out.println("Initial data: ");
         printSet(set);
 
-        set.add("grape");
+        set.remove("kiwi");
 
         System.out.println("\nUpdated data: ");
         printSet(set);
