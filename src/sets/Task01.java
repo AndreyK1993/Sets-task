@@ -5,9 +5,14 @@ import java.util.Set;
 
 public class Task01 {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
+        Set<String> initialSet = getInitData();
+        getSetInitial(initialSet);
+        updateAndPrintSet(initialSet);
+    }
 
-        Set<String> set= new HashSet<>();
+    private static Set<String> getInitData() {
+        Set<String> set = new HashSet<>();
 
         set.add("orange");
         set.add("apple");
@@ -15,19 +20,25 @@ public class Task01 {
         set.add("strawberry");
         set.add("mango");
 
-        System.out.println("Initial data: ");
-        printSet(set);
-
-        set.add("grape");
-
-        System.out.println("\nUpdated data: ");
-        printSet(set);
+        return set;
     }
-    private static void printSet(Set<String> set) {
-        int index = 1;
+
+    private static void getSetInitial(Set<String> set) {
+        int count = 0;
+        System.out.println("Initial data:");
         for (String item : set) {
-            System.out.println(index + ") " + item);
-            index++;
+            count++;
+            System.out.println(count + ") " + item);
+        }
+    }
+
+    private static void updateAndPrintSet(Set<String> set) {
+        set.add("grape");
+        int count = 0;
+        System.out.println("\nUpdated data:");
+        for (String item : set) {
+            count++;
+            System.out.println(count + ") " + item);
         }
     }
 }
